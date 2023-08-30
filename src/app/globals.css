@@ -4,24 +4,32 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --text-rgb: 255, 255, 255;
+  --base: 7, 20, 34;
+  --primary: 11, 27, 43;
+  --secondary: 17, 33, 49;
+  --input: 4, 15, 26;
 }
 
+.base{
+  background-color: rgb(var(--base));
+}
+.primary{
+  background-color: rgb(var(--primary));
+}
+.secondary{
+  background-color: rgb(var(--secondary));
+}
+.input{
+  background-color: rgb(var(--input));
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--text-rgb));
+  background: rgb(var(--foreground-rgb));
 }
